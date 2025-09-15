@@ -1,11 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Mars</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+        <style>
+            a:link {
+                text-decoration: none;
+                color: #000000;
+               
+
+            }
+            a:visited {
+                text-decoration: none;
+                color: #575757;
+            }
+
+            .profile {
+                /* background-color: lightcoral; */
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+                justify-content: center;
+                
+                
+           
+            }
+
+            a:hover {
+                text-decoration: underline;
+                color: #575757;
+               
+                
+            }
+            
+
+
+            .navigation {
+                padding: 20px;
+                /* background-color: rgb(60, 157, 187); */
+                display: flex;
+                flex-direction: row;
+                
+                
+                justify-content: space-around;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                /* opacity: 0.8; */
+                
+                
+            }
+
+
+            .contact {
+                padding: 10px;
+                /* background-color: rgb(60, 157, 187); */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+            }
+
+
+            
+
+            .papers {
+                /* background-color: antiquewhite; */
+                border: 1px solid black;
+                margin-top: 5px;
+                padding-left: 5px;
+            }
+
+            .report {
+                /* background-color: rgb(216, 255, 242); */
+                border: 1px solid black;
+                margin-top: 5px;
+                padding-left: 5px;
+            }
+
+            .thesis-title {
+                /* background-color: rgb(239, 216, 255); */
+                border: 1px solid black;
+                margin-top: 5px;
+                padding-left: 5px;
+            }
+
+            .main-body {
+                max-width: 1000px;
+                margin: auto;
+                
+            }
+
+
+            .buttons {
+                /* background-color: aliceblue; */
+                     margin-top: 10px;
+                    display: flex;
+                    justify-content: left;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    margin-bottom: 10px;
+                    margin-left: -10px;
+                }
+
+                .btn {
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    border: 0px solid #333;
+                    border-radius: 15px;
+                    text-decoration: none;
+                    font-size: 16px;
+                    color: #333;
+                    transition: all 0.2s ease;
+                }
+
+                .btn:hover {
+                    background: #333;
+                    color: white;
+                    text-decoration: none;
+                }
+
+                #contact {
+                    margin-top: 20px;
+                    border-top: 1px solid #333;
+                    margin-bottom: 100px;
+                }
+
+            
+        </style>
+
+
     </head>
-    <body>
-        <h1>hello</h1>
+    <body style="font-family:Roboto mono; background-color:#e6e0d284 ;">
+
+        <div class="main-body">
+
+        <!-- Navigation -->
+         <div class="navigation">
+        
+
+            <a href="#about" class="btn">about</a>
+            <a href="#publications" class="btn">publications</a>
+            <!-- <a href="#research" class="btn">research</a> -->
+            <a href="#projects" class="btn">projects</a>
+            <a href="#contact" class="btn">contact</a>
+            <a href="#cv" class="btn">cv</a>
+
+          
+        </div>
+
+         <div class="profile">
+
+            <img src="/asset/p2.png" width="200px"  style="border-radius: 100px;">
+
+            <h1>Priyanshu Raj Mall</h1>
+            <p>Information Retrieval  ·  NLP · LLMs</p>
+            <div class="buttons">
+                <a href="mailto:mall.priyanshu07@gmail.com" class="btn">Email</a>
+                <a href="https://github.com/mallpriyanshu" class="btn">GitHub</a>
+                <a href="https://www.linkedin.com/in/priyanshu-raj-mall/" class="btn">LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=JHUZuhEAAAAJ&hl=en" class="btn">Scholar</a>
+                <a href="https://orcid.org/0009-0005-4163-9649" class="btn">ORCID</a>
+            </div>
+    
+        </div>
+
+        <div id="about">
+            <h2>About</h2>
+           <p> I graduated from IISER Kolkata with BS MS majoring in 
+            Physics and minor in Computational and Data Sciences.
+            I did my master's thesis under the guidance of Prof Dwaipayan Roy
+             on Relevance Feedback and Query Expansion in Information Retrieval.
+            </p> 
+
+            <p> 
+                
+            My research Interest are NLP, Information Retrieval, and LLMs. More specifically 
+            I am interested in learning and applying LLMs to search problem. 
+            </p>
+
+
+
+        </div>
+
+
+        <div id="publications">
+
+            <h2>Publication</h2>
+            List of my publication, also check out my Google Scholar Profile.
+
+        </div>
+
+        <div id class="conference-papers">
+            <h3>conference-papers</h3>
+
+            <div class="papers">   
+                <p>[2024]</p>
+                <p>Exploring the Nexus Between Retrievability and Query Generation Strategies<p>
+                <p> A Sinha, PR Mall, D Roy </p>
+                <p>[paper] [code]</p>
+            </div>
+
+            <div class="papers">   
+                <p>[2023]</p>
+                <p>A Comparative Analysis of Retrievability and PageRank Measures<p>
+                <p>A Sinha, PR Mall, D Roy, K Ghosh</p>
+                <p>[paper] [code]</p>
+            </div>
+
+            <div class="papers">   
+                <p>[2023]</p>
+                <p>Findability: A Novel Measure of Information Accessibility<p>
+                <p>A Sinha, PR Mall, D Roy</p>
+                <p>[paper] [code] <a class="abstract" href="#">[abstract]</a> </p>
+
+            </div>
+            
+        </div>
+
+         <div class="thesis">
+
+
+            <h3>thesis</h3>
+
+            <div class="thesis-title">   
+                <p>[2023]</p>
+                <p>Relevance Feedback and Query Expansion in Information Retrieval<p>
+                <p> Master's Thesis, IISER Kolkata</p>
+                <p>[pdf] [slides]</p>
+            </div>
+            
+        </div>
+
+         <div class="reports">
+            <h3>technical reports</h3>
+            
+            <div class="report">
+                <p>[2025]</p>
+                <p>SIGIR LiveRAG Challange<p>
+                <p>Team PRMAS-DRCA</p>
+                <p>[report] [slides]</p>
+            </div>
+
+            <div class="report">
+
+                <p>[2024]</p>
+                <p>Datathon @ Indian symposium on machine learning<p>
+                <p>Team PRMAS</p>
+                <p>
+                     Winner of the Datathon 2024
+                </p>
+                <p>[report] [slides]</p>
+            </div>
+
+        </div>
+
+        
+        <div>
+            <h2>Misc.</h2>
+            I like travelling and I enjoy captering in nature. Here are few of my favourite places. 
+        </div>
+    
+        <div id="contact">
+            <h2>Contact</h2>
+            Reach out to me at mailto: mall.priyanshu07 at gmail.com
+
+        </div>
+
+        </div>
+    
+    
+    
+    
+    
     </body>
 </html>     
