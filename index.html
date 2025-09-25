@@ -1,321 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Mars</title>
+<head>
+    <title>Priyanshu Raj Mall</title>
+    <link rel="icon" type="image/svg+xml" href="asset/image copy.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F4F7FA;
+            --text-color: #2C3E50;
+            --accent-color: #2980B9;
+            --link-hover: #1A5276;
+            --border-color: #D0D4D8;
+        }
 
-        <style>
-            a:link {
-                text-decoration: none;
-                color: #000000;
-               
+        body.dark {
+            --bg-color: #121212;
+            --text-color: #E0E0E0;
+            --accent-color: #BB86FC;
+            --link-hover: #985EFF;
+            --border-color: #333;
+        }
 
-            }
-            a:visited {
-                text-decoration: none;
-                color: #575757;
-            }
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-            .profile {
-                /* background-color: lightcoral; */
-                display: flex;
-                flex-direction: column;
-                align-items: left;
-                justify-content: center;
-                
-                
-           
-            }
+        a:link { text-decoration: none; color: var(--accent-color); }
+        a:visited { text-decoration: none; color: var(--accent-color); }
+        a:hover { text-decoration: underline; color: var(--link-hover); }
 
-            a:hover {
-                text-decoration: underline;
-                color: #575757;
-               
-                
-            }
+        .main-body { max-width: 800px; margin: auto; }
+        .navigation { padding:20px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; }
+        .nav-links { display:flex; gap:90px }
+        .btn { padding:5px 12px; border-radius:15px; font-size:16px; border:0px solid var(--border-color);
+               color: var(--text-color); background:transparent; transition:0.2s; cursor:pointer; }
+        .btn:hover { background: var(--accent-color); color:white; border-color: var(--accent-color); text-decoration:none; }
 
+        .profile { display:flex; flex-direction:column; align-items:left; justify-content:center; }
+        .buttons { margin-top:10px; display:flex; flex-wrap:wrap; gap:10px; }
 
-            .navigation {
-                padding: 20px;
-    
-                display: flex;
-                flex-direction: row;
-                
-                
-                justify-content: space-around;
-                margin-top: 10px;
-                margin-bottom: 20px;
-                /* opacity: 0.8; */
-                
-                
-            }
+        .papers, .report, .thesis-title {
+            border:1px solid var(--border-color);
+            margin-top:5px;
+            padding-left:5px;
+            border-radius:5px;
+            background-color: rgba(0,0,0,0.02);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
 
+        .pictures { margin-top:10px; display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+    </style>
+</head>
+<body>
 
-            .contact {
-                padding: 10px;
-                /* background-color: rgb(60, 157, 187); */
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                
-            }
+<div class="main-body">
 
-
-            
-
-            .papers {
-                /* background-color: antiquewhite; */
-                border: 1px solid black;
-                margin-top: 5px;
-                padding-left: 5px;
-                border-radius: 5px;
-            }
-
-            .report {
-                /* background-color: rgb(216, 255, 242); */
-                border: 1px solid black;
-                margin-top: 5px;
-                padding-left: 5px;
-            }
-
-            .thesis-title {
-                /* background-color: rgb(239, 216, 255); */
-                border: 1px solid black;
-                margin-top: 5px;
-                padding-left: 5px;
-            }
-
-            .main-body {
-                max-width: 1000px;
-                margin: auto;
-                
-                
-                
-            }
-
-
-            .buttons {
-                /* background-color: aliceblue; */
-                     margin-top: 10px;
-                    display: flex;
-                    justify-content: left;
-                    flex-wrap: wrap;
-                    gap: 10px;
-                    margin-bottom: 10px;
-                    margin-left: -10px;
-                }
-
-                .btn {
-                    padding-top: 5px;
-                    padding-bottom: 5px;
-                    padding-left: 10px;
-                    padding-right: 10px;
-                    border: 0px solid #333;
-                    border-radius: 15px;
-                    text-decoration: none;
-                    font-size: 16px;
-                    color: #333;
-                    transition: all 0.2s ease;
-                }
-
-                .btn:hover {
-                    background: #333;
-                    color: white;
-                    text-decoration: none;
-                }
-
-                #contact {
-                    margin-top: 20px;
-                    border-top: 1px solid #333;
-                    margin-bottom: 100px;
-                }
-
-                .pictures {
-                    /* background-color: rgb(54, 152, 238); */
-                    margin-top: 10px;
-                    border-top: 0px solid #333;
-                    margin-bottom: 0px;
-                    display: flex;
-                    flex-direction:row;
-                    flex-wrap: wrap;
-                    gap: 10px;
-                    margin-left: -10px;
-                    justify-content: center;
-                    
-                }
-        </style>
-
-
-    </head>
-    <body style="font-family:Roboto mono; background-color:#e6e0d284;">
-
-        <div class="main-body">
-
-        <!-- Navigation -->
-        <div class="navigation">
-        
-
+    <!-- Navigation -->
+    <div class="navigation">
+        <div class="nav-links">
             <a href="#about" class="btn">about</a>
             <a href="#publications" class="btn">publications</a>
-            <!-- <a href="#research" class="btn">research</a> -->
-            <!-- <a href="#projects" class="btn">projects</a> -->
             <a href="#contact" class="btn">contact</a>
-            <a href="#cv" class="btn">cv</a>
-
-          
+            <a href="/asset/Resume_Priyanshu.pdf" class="btn">resume</a>
         </div>
-
-        <div class="profile">
-
-            <img src="/asset/p2.png" width="200px"  style="border-radius: 100px;">
-
-            <h1>Priyanshu Raj Mall</h1>
-            <p>Information Retrieval  ·  NLP · LLMs</p>
-            <div class="buttons">
-                <a href="mailto:mall.priyanshu07@gmail.com" class="btn">Email</a>
-                <a href="https://github.com/mallpriyanshu" class="btn">GitHub</a>
-                <a href="https://www.linkedin.com/in/priyanshu-raj-mall/" class="btn">LinkedIn</a>
-                <a href="https://scholar.google.com/citations?user=JHUZuhEAAAAJ&hl=en" class="btn">Scholar</a>
-                <a href="https://orcid.org/0009-0005-4163-9649" class="btn">ORCID</a>
-            </div>
-    
-        </div>
-
-        <div id="about">
-            <h2>About</h2>
-           <p> I graduated from IISER Kolkata with BS MS majoring in 
-            Physics and minor in Computational and Data Sciences.
-            I did my master's thesis under the guidance of Prof Dwaipayan Roy
-             on Relevance Feedback and Query Expansion in Information Retrieval.
-            </p> 
-
-            <p> 
-                
-            My research Interest are NLP, Information Retrieval, and LLMs. More specifically 
-            I am interested in learning and applying LLMs to search problem. 
-            </p>
-
-
-
-        </div>
-
-
-        <div id="publications">
-
-            <h2>Publication</h2>
-            List of my publication, also check out my <a href="https://scholar.google.com/citations?user=JHUZuhEAAAAJ&hl=en">Google Scholar</a> Profile.
-
-        </div>
-
-        <div id class="conference-papers">
-            <h3>conference-papers</h3>
-
-            <div class="papers">   
-                <p>[2024]</p>
-                <p>Exploring the Nexus Between Retrievability and Query Generation Strategies<p>
-                <p>ECIR</p>
-                <p> A Sinha, PR Mall, D Roy </p>
-                <p>[paper] [code]</p>
-            </div>
-
-            <div class="papers">   
-                <p>[2023]</p>
-                <p>A Comparative Analysis of Retrievability and PageRank Measures<p>
-                <p>FIRE</p>
-                <p>A Sinha, PR Mall, D Roy, K Ghosh</p>
-                <p>[paper] [code]</p>
-            </div>
-
-            <div class="papers">   
-                <p>[2023]</p>
-                <p>Findability: A Novel Measure of Information Accessibility<p>
-                <p>CIKM</p>
-                <p>A Sinha, PR Mall, D Roy</p>
-                <p>[paper] [code] <a class="abstract" href="#">[abstract]</a> </p>
-            </div>
-            
-        </div>
-
-        <div class="thesis">
-
-
-            <h3>thesis</h3>
-
-            <div class="thesis-title">   
-                <p>[2023]</p>
-                <p>Relevance Feedback and Query Expansion in Information Retrieval<p>
-                <p> Master's Thesis, IISER Kolkata</p>
-                <p>[pdf] [slides]</p>
-            </div>
-            
-        </div>
-
-        <div class="reports">
-            <h3>technical reports</h3>
-            
-            <div class="report">
-                <p>[2025]</p>
-                <p>SIGIR LiveRAG Challenge<p>
-                <p>Team PRMAS-DRCA</p>
-                <p>[report] [slides]</p>
-            </div>
-
-            <div class="report">
-
-                <p>[2024]</p>
-                <p>Datathon @ Indian symposium on machine learning<p>
-                <p>Team PRMAS</p>
-                <p>
-                     Winner of the Datathon 2024
-                </p>
-                <p>[report] [slides]</p>
-            </div>
-
-        </div>
-
-        
-        <div>
-            <h2>Misc.</h2>
-            I enjoy hiking, traveling and I enjoy capturing in nature. Here are few of my clicks. 
-
-            <div class="pictures">
-
-
-                <div class="image"></div>
-                    <div>
-                        <img src="/asset/hills-1.jpg" alt="flower image" width="250px">
-                        <!-- <div class ="image-text"> Aug 2024 </div> -->
-                    </div>
-                    <div><img src="/asset/what-a-life.jpg" alt="flower image" width="250px"></div>
-                    <div><img src="/asset/some-flowers.jpg" alt="flower image" width="250px"></div>
-                    <div><img src="/asset/wow.jpg" alt="flower image" width="250px"></div>
-                    <div><img src="/asset/hills-2.jpg" alt="flower image" width="250px"></div>
-                </div>
-
-                
-            </div>
-
-
-            <div id="contact">
-            <h2>Contact</h2>
-            Reach out to me at mall.priyanshu07@gmail.com
-
-        </div>
-
-        </div>
-    
-        
-    
-
+        <button id="theme-toggle" class="btn">🌙</button>
     </div>
-    
-    
-    
-    
-    
-    </body>
-</html>     
+
+    <!-- Profile -->
+    <div class="profile">
+        <img src="/asset/p2.png" width="200px" style="border-radius:100px;">
+        <h1>Priyanshu Raj Mall</h1>
+        <p>Information Retrieval · NLP · LLMs</p>
+        <div class="buttons" style="margin-left: -12px;">
+            <a href="mailto:mall.priyanshu07@gmail.com" class="btn">Email</a>
+            <a href="https://github.com/mallpriyanshu" class="btn">GitHub</a>
+            <a href="https://www.linkedin.com/in/priyanshu-raj-mall/" class="btn">LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user=JHUZuhEAAAAJ&hl=en" class="btn">Scholar</a>
+            <a href="https://orcid.org/0009-0005-4163-9649" class="btn">ORCID</a>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div id="about">
+        <h2>About</h2>
+        <p>
+            My research interests span Information Retrieval, 
+            Natural Language Processing (NLP), and Large Language Models (LLMs), with a
+             particular focus on leveraging LLMs to improve search and retrieval systems. I enjoy working at
+              the intersection of theory and real-world applications, building systems and applying research developments to practical AI problems.
+        </p>
+        <p>
+            I graduated from IISER Kolkata with a BS-MS, majoring in Physics and minor in Computational and Data Sciences.
+            My master's thesis, under Prof. Dwaipayan Roy, focused on Relevance Feedback and Query Expansion in Information Retrieval.
+        </p>
+    </div>
+
+    <!-- Publications -->
+    <div id="publications">
+        <h2>Publications</h2>
+        <p>List of my publications, feel free to check out my <a href="https://scholar.google.com/citations?user=JHUZuhEAAAAJ&hl=en">Google Scholar</a> profile.</p>
+
+        <h3>Conference Papers</h3>
+
+        <div class="papers">
+            <!-- <p>[2024]</p> -->
+            <p><b>Exploring the Nexus Between Retrievability and Query Generation Strategies</b></p>
+            <p>ECIR 2024</p>
+            <p>A Sinha, PR Mall, D Roy</p>
+            <p>
+                <a href="https://doi.org/10.1007/978-3-031-56066-8_16">[paper]</a>
+                <a href="https://arxiv.org/abs/2404.09473">[arXiv]</a>
+                <a href="https://mallpriyanshu.github.io/retrievability-survey/ecir2024/">[project]</a>
+            </p>
+        </div>
+
+        <div class="papers">
+            <!-- <p>[2023]</p> -->
+            <p><b>A Comparative Analysis of Retrievability and PageRank Measures</b></p>
+            <p>FIRE 2023</p>
+            <p>A Sinha, PR Mall, D Roy, K Ghosh</p>
+            <p>
+                <a href="https://doi.org/10.1145/3632754.3632760">[paper]</a>
+                <a href="https://arxiv.org/abs/2311.10348">[arXiv]</a>
+                <a href="https://docs.google.com/presentation/d/1eam2InlmoNCnkOV8Z1W4GAIy3lom1IjxRqpQoZe2hRU/edit?usp=sharing">[slides]</a>
+            </p>
+        </div>
+
+        <div class="papers">
+            <!-- <p>[2023]</p> -->
+            <p><b>Findability: A Novel Measure of Information Accessibility</b></p>
+            <p>CIKM 2023</p>
+            <p>A Sinha, PR Mall, D Roy</p>
+            <p>
+                <a href="https://dl.acm.org/doi/10.1145/3583780.3615256">[paper]</a>
+                <a href="https://arxiv.org/abs/2310.09508">[arXiv]</a>
+                <a href="https://github.com/mallpriyanshu/findability">[code]</a>
+                <a href="https://github.com/mallpriyanshu/findability/blob/main/poster/CIKM2023_poster.pdf">[poster]</a>
+            </p>
+        </div>
+
+        <h3>Thesis</h3>
+        <div class="thesis-title">
+            <!-- <p>[2023]</p> -->
+            <p><b>Relevance Feedback and Query Expansion in Information Retrieval</b></p>
+            <p>Master's Thesis, IISER Kolkata</p>
+            <p>
+                <a href="http://eprints.iiserkol.ac.in/1561/">[link]</a>
+            </p>
+        </div>
+
+        <h3>Technical Reports</h3>
+        <div class="report">
+            <!-- <p>[2025]</p> -->
+            <p><b>SIGIR 2025 LiveRAG Challenge</b></p>
+            <p>Team PRMAS-DRCA</p>
+            <p>
+                <a href="https://github.com/mallpriyanshu/LiveRAG-2025">[repo]</a>
+            </p>
+        </div>
+
+        <div class="report">
+            <!-- <p>[2024]</p> -->
+            <p><b>Datathon @ IndoML 2024</b></p>
+            <p>Team PRMAS — Winner</p>
+            <p>
+                <a href="https://drive.google.com/file/d/1iX31vmzPYxPRHN05dJNq-aVN6mMcxDo3/view?usp=sharing">[report]</a>
+                <a href="https://drive.google.com/file/d/1uX3Z961O49AX40YyI73XuMcoTsjIud9R/view?usp=sharing">[certificate]</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Misc -->
+    <div>
+        <h2>Misc.</h2>
+        <p>I enjoy hiking, traveling, and capturing moments in nature. Here are a few of my shots.</p>
+        <div class="pictures">
+            <img src="/asset/hills-1.jpg" width="250px">
+            <img src="/asset/what-a-life.jpg" width="250px">
+            <img src="/asset/some-flowers.jpg" width="250px">
+            <img src="/asset/wow.jpg" width="250px">
+            <img src="/asset/hills-2.jpg" width="250px">
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact" style="margin-top:20px;border-top:1px solid var(--border-color);margin-bottom:100px;">
+        <h2>Contact</h2>
+        You can reach me at <a href="mailto:mall.priyanshu07@gmail.com">mall.priyanshu07@gmail.com</a>
+    </div>
+
+</div>
+
+<script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        toggleBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    });
+</script>
+</body>
+</html>
